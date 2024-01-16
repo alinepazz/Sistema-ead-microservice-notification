@@ -38,7 +38,7 @@ Cada funcionalidade da plataforma é abordada como um serviço independente, pro
 
 ## Como executar o projeto
 - Pré-requisitos: Java 11
-Ter os seguinte projetos em execução:
+- Ter os seguinte projetos em execução:
   - Service Registry
   - Config Server
   - Api Gateway
