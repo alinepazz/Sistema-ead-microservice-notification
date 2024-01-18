@@ -1,6 +1,6 @@
 package com.ead.notification.services.impl;
 
-import com.ead.notification.enums.NotificationSatus;
+import com.ead.notification.enums.NotificationStatus;
 import com.ead.notification.models.NotificationModel;
 import com.ead.notification.repositories.NotificationRepository;
 import com.ead.notification.services.NotificationService;
@@ -27,7 +27,7 @@ public class NotificationServiceImpl implements NotificationService {
 
     @Override
     public Page<NotificationModel> findAllNotificationsByUser(UUID userId, Pageable pageable) {
-        return notificationRepository.findAllByUserIdAndNotificationStatus(userId, NotificationSatus.CREATED, pageable);
+        return notificationRepository.findAllByUserIdAndNotificationStatus(userId, NotificationStatus.CREATED, pageable);
     }
 
     @Override

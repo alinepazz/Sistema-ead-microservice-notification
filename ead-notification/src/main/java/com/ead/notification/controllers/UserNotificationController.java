@@ -45,7 +45,7 @@ public class UserNotificationController {
         if (notificationModelOptional.isEmpty()){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Notification not found!");
         }
-        notificationModelOptional.get().setNotificationSatus(notificationDto.getNotificationSatus());
+        notificationModelOptional.get().setNotificationStatus(notificationDto.getNotificationStatus());
         notificationService.saveNotification(notificationModelOptional.get());
         return ResponseEntity.status(HttpStatus.OK).body(notificationModelOptional.get());
     }

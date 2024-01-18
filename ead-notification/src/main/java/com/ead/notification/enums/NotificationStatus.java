@@ -1,6 +1,6 @@
 package com.ead.notification.enums;
 
-public enum NotificationSatus {
+public enum NotificationStatus {
     CREATED,
     READ
 }

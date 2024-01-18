@@ -1,7 +1,7 @@
 package com.ead.notification.consumers;
 
 import com.ead.notification.dtos.NotificationCommandDto;
-import com.ead.notification.enums.NotificationSatus;
+import com.ead.notification.enums.NotificationStatus;
 import com.ead.notification.models.NotificationModel;
 import com.ead.notification.services.NotificationService;
 import org.springframework.amqp.core.ExchangeTypes;
@@ -30,7 +30,7 @@ public class NotificationConsumer {
     public void listenUserEvent(@Payload NotificationCommandDto notificationCommandDto){
         var notificationModel = new NotificationModel();
         BeanUtils.copyProperties(notificationCommandDto, notificationModel);
-        notificationModel.setNotificationSatus(NotificationSatus.CREATED);
+        notificationModel.setNotificationStatus(NotificationStatus.CREATED);
         notificationService.saveNotification(notificationModel);
       }
 
